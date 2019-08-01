@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: springboot
+  name: springboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: springboot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: springboot
+    spec:
+      containers:
+      - image: pallavi1610/springbooteaxmple
+        name: springboot
+        ports:
+        - containerPort: 8070
+        resources: {}
+status: {}
